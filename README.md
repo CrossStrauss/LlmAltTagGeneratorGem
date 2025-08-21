@@ -28,22 +28,22 @@ rails generate alt_tag_gen:install
 This will create config/initializers/alt_tag_gen.rb. Then, edit it to configure your settings:
 
 AltTagGen.configure do |config|
-  # OpenAI API key (recommended to keep in environment variables)
+  ## OpenAI API key (recommended to keep in environment variables)
   config.api_key = ENV["OPENAI_API_KEY"]
 
-  # GPT model to use (e.g., gpt-4o-mini, gpt-4, etc.)
+  ## GPT model to use (e.g., gpt-4o-mini, gpt-4, etc.)
   config.model = "gpt-4o-mini"
 
-  # OpenAI API endpoint
+  ## OpenAI API endpoint
   config.openai_api_url = "https://api.openai.com/v1/chat/completions"
 
-  # Maximum tokens to generate in the response
+  ## Maximum tokens to generate in the response
   config.max_tokens = 50
 
-  # Optional system prompt for AI context
+  ## Optional system prompt for AI context
   config.system_prompt = "You are an AI trained to generate descriptive alt text for images."
 
-  # Optional user prompt to instruct the AI
+  ## Optional user prompt to instruct the AI
   config.user_prompt = "Write a short, descriptive alt text for this image:"
 end
 
